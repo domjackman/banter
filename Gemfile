@@ -5,7 +5,32 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+group :development do
+	gem 'sqlite3'
+
+	gem 'better_errors'
+	gem 'binding_of_caller'
+end
+
+group :production do
+	gem 'pg'
+end
+
+#to allow us to add social login
+
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+
+# add form helpers
+gem 'simple_form'
+
+#Add pusher for real time notifications
+gem 'pusher'
+
+# Add in nicer urls to rooms
+gem 'stringex'
+
 
 
 # Gems used only for assets and not required
